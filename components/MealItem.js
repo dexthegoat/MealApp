@@ -20,7 +20,7 @@ export default function MealItem({
 }) {
   const navigation = useNavigation();
 
-  const onMealClicked = () => {
+  const onMealClick = () => {
     navigation.navigate('MealDetail', {
       mealId: id,
     });
@@ -31,7 +31,7 @@ export default function MealItem({
       <Pressable
         android_ripple={{ color: '#ccc' }}
         style={({ pressed }) => (pressed ? styles.buttonPressed : null)}
-        onPress={onMealClicked}
+        onPress={onMealClick}
       >
         <View style={styles.innerContainer}>
           <View>
