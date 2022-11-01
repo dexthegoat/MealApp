@@ -7,6 +7,7 @@ import MealDetails from '../components/MealDetails';
 import List from '../components/MealDetail/List';
 import IconButton from '../components/IconButton';
 import { addFavorite, removeFavorite } from '../store/redux/store';
+import { getFavoriteMealIds } from '../store/redux/store';
 
 // import { FavoritesContext } from '../store/context/favorites-context';
 
@@ -14,7 +15,7 @@ import { MEALS } from '../data/dummy-data';
 
 export default function MealDetailScreen({ route, navigation }) {
   // const { ids, removeFavorite, addFavorite } = useContext(FavoritesContext);
-  const favoriteMealIds = useSelector((state) => state.favoriteMeals.ids);
+  const favoriteMealIds = useSelector(getFavoriteMealIds);
   const dispatch = useDispatch();
 
   const mealId = route.params.mealId;

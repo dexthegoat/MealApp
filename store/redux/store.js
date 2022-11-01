@@ -17,6 +17,8 @@ const favoriteSlice = createSlice({
 
 export const { addFavorite, removeFavorite } = favoriteSlice.actions;
 
+export const getFavoriteMealIds = ({ favoriteMeals }) => favoriteMeals.ids;
+
 export const store = configureStore({
   reducer: {
     favoriteMeals: favoriteSlice.reducer,
